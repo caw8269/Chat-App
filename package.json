@@ -9,5 +9,17 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/caw8269/Chat-App.git"
+    },
+    "bugs": {
+        "url": "https://github.com/caw8269/Chat-App/issues"
+    },
+    "homepage": "https://github.com/caw8269/Chat-App#readme",
+    "dependencies": {
+        "express": "^5.1.0",
+        "socket.io": "^4.8.1"
+    }
 }
