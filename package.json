@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "echo \"No tests specified\" && exit 0"
+        "test": "echo \"No tests specified\" && exit 0",
+        "stop": "node close.js"
     },
     "keywords": [],
     "author": "",
@@ -20,6 +21,7 @@
     "homepage": "https://github.com/caw8269/Chat-App#readme",
     "dependencies": {
         "express": "^5.1.0",
+        "kill-port": "^2.0.1",
         "socket.io": "^4.8.1"
     }
 }
