@@ -6,7 +6,8 @@ const { Server } = require('socket.io');
 const http = require('http');
 const server = http.createServer(app);
 const io = new Server(server);
-const port = 5000;
+const port = 3000;
+const kill = require('kill-port');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
