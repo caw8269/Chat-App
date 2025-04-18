@@ -3,40 +3,94 @@
 <head>
     <title>Chat app using Socket IO and Node JS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+        .name {
+            color:mediumseagreen;
+            font-weight: bold;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .logo {
+            font-weight: 900;
+            font-size: large;
+            text-align: center;
+            top: 30px;
+        }
+        .form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .text {
+            border-radius: 15px;
+            border: 2px solid gray;
+            padding: 20px;
+            
+        }
+        .user {
+            height: 30px;
+            width: 150px;
+        }
+        .message {
+            height: 30px;
+            width: 13.75in;
+        }
+        .btn {
+            border-radius: 15px;
+            background: #6565ff;
+            color: white;
+            height: 40px;
+            width: 50px;
+
+        }
+        .messages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            columns: flex;
+            flex-direction: column;
+        }
+        .heading {
+            position:fixed;
+            display: flex;
+            flex-direction: row;
+            top: 0px;
+            left: 0px;
+        }
+        .footing {
+            position: fixed;
+            bottom: 0px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="font-bold text-green-500 
-               text-3xl text-center mt-5">
-          ChatApp
-      </h1>
-    <div>
-        <h2 class="font-semibold text-xl 
-                   text-center mt-5" 
-            id="logo">
-              Chat App using Socket io
-          </h2>
-    </div>
-    <form class="flex flex-col justify-center 
-                 items-center mt-5" 
+    <form class="form mt-5" 
           id="form">
-        <input class="border border-gray-400 
-                      rounded-md mt-5 p-1" 
-               type="text" 
-               placeholder="Name" 
-               id="myname">
-        <input class="border border-gray-400 
-                      rounded-md mt-5 p-1" 
-               type="text" 
-               placeholder="Message" 
-               id="message">
-        <button class="bg-blue-500 rounded-md p-2 
-                       text-white mt-5">
-              Send
-          </button>
+          <div class="heading">
+          <h1 class="name mt-5">ChatApp</h1>
+          <h2 class="logo mt-5">Chat App using Socket io</h2>
+            <input class="text mt-5 user" 
+                          type="text" 
+                          placeholder="Username" 
+                          id="myname">
+        </div>
+        <div class="footing">
+            <input class="text mt-5 message" 
+                   type="text" 
+                  placeholder="Message" 
+                  id="message">
+            <button class="btn mt-5">
+                  Send
+              </button>
+        </div>
     </form>
-    <div class="flex flex-col justify-center 
-                items-center mt-5" 
+    <div class="messages mt-5" 
          id="messageArea">
     </div>
 </body>
